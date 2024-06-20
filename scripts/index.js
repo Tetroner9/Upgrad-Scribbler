@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     };
 
     allPostsBtn.onclick = function () {
-        window.location.href = 'bloglist.html'; // Adjust this URL to your actual blog list page
+        window.location.href = 'html/postslist.html'; // Adjust this URL to your actual blog list page
     };
 
     createPostBtn.onclick = function () {
