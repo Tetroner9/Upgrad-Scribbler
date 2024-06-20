@@ -1,0 +1,132 @@
+.post-main-container {
+    padding: 30px 60px;
+}
+
+.post-title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#authorEditBtnContainer {
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.post-author {
+    font-family: 'Ubuntu Mono', cursive;
+    font-size: 22px;
+}
+
+#editPostButton {
+    width: 80px;
+    padding: 10px;
+    cursor: pointer;
+    background: #ed2553;
+    color: #fff;
+    float: right;
+    box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+    outline: none;
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#editPostButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px -10px rgb(240, 75, 113);
+}
+
+.fa-edit,
+.fa-save {
+    padding-left: 7px;
+}
+
+.fa-thumbs-up {
+    margin-right: 5px;
+}
+
+#postText {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.like-post {
+    margin-top: 20px;
+}
+
+#likePostBtn {
+    width: 80px;
+    display: block;
+    background: #ed2553;
+    color: #ffffff;
+    box-shadow: 0 10px 20px -8px rgb(240, 75, 113);
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.like-post #likePostBtn:hover {
+    transform: translateY(-3px);
+}
+
+#likesCount {
+    color: #666;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13px;
+}
+
+.comment-form {
+    width: 100%;
+    margin: 25px 0;
+}
+
+#commentText {
+    width: 70%;
+}
+
+.add-comment-btn {
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ed2553;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.3s;
+    border: 2px solid #ed2553;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #ed2553;
+  }
+  
+  .add-comment-btn:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #ed2553;
+  }
+  
+  .add-comment-btn:active {
+    transform: scale(0.9);
+  } 
+
+.allCommentsHeading {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#allCommentsBox {
+    background-color: #e2e4e6;
+    padding: 10px 0;
+    width: 70%;
+    display: none;
+}
