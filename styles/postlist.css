@@ -11,11 +11,6 @@ body {
     color: #c22;
 }
 
-.fa-ellipsis-h:hover {
-    color: #818181;
-    cursor: pointer;
-}
-
 .header-container {
     width: 100%;
 }
@@ -92,8 +87,34 @@ body {
     padding: 10px 0;
 }
 
+.post-more:hover {
+    color: blue;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: translate(-50%, -50%) scale(0.7);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes pop-out {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.7);
+        opacity: 0;
+    }
+}
+
 .delete-post-modal {
-    display: none;
+    display: none; /* Initially hidden */
     position: absolute;
     z-index: 1;
     top: 0;
@@ -103,6 +124,7 @@ body {
     overflow: auto;
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.8);
+    transition: opacity 0.3s;
 }
 
 .delete-post-modal-content {
@@ -115,7 +137,11 @@ body {
     font-family: 'Abel', sans-serif;
     padding: 20px;
     text-align: center;
+    border-radius: 5px;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
 }
+
 
 .delete-post-heading {
     font-size: 18px;
@@ -125,17 +151,25 @@ body {
 
 .delete-post-btns-container {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
+    
+}
+
+.delete-post-btns-container button {
+    border-radius: 5px;
+}
+
+.delete-post-btns-container button:hover {
+    box-shadow: 0 4px 10px 0 rgba(17, 4, 63, 0.2), 0 4px 20px 0 rgba(79, 19, 97, 0.19);
 }
 
 .confirm-delete-btn {
     width: 80px;
-    align-self: right;
+    background: green;
 }
 
 .cancel-delete-btn {
     width: 80px;
-    align-self: center;
     background: #c22;
 }

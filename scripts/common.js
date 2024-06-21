@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded', () => {
+    var signUpModal = document.getElementById('signUpModal');
+    var signInModal = document.getElementById('signInModal');
+
+    signUpModal.addEventListener('click', function(event) {
+        if (event.target === signUpModal) {
+            closeModal();
+        }
+    });
+
+    signInModal.addEventListener('click', function(event) {
+        if (event.target === signInModal) {
+            closeModal();
+        }
+    });
+});
+
 function openSignupModal() {
     var modal = document.getElementById('signUpModal');
     var modalContent = modal.querySelector('.modal-content');
@@ -16,7 +33,6 @@ function openSigninModal() {
     }, 10);
 }
 
-
 function closeModal() {
     var signInModal = document.getElementById('signInModal');
     var signUpModal = document.getElementById('signUpModal');
@@ -26,12 +42,16 @@ function closeModal() {
     signInModalContent.classList.remove('modal-content-show');
     signUpModalContent.classList.remove('modal-content-show');
     
+    signInModalContent.classList.add('modal-content-hide');
+    signUpModalContent.classList.add('modal-content-hide');
+    
     setTimeout(() => {
         signInModal.classList.remove('modal-show');
         signUpModal.classList.remove('modal-show');
-    }, 300);
+        signInModalContent.classList.remove('modal-content-hide');
+        signUpModalContent.classList.remove('modal-content-hide');
+    }, 300); 
 }
-
 
 function displaySignupModal() {
     var signInModal = document.getElementById('signInModal');
@@ -48,4 +68,3 @@ function displaySignupModal() {
         }, 10);
     }, 300);
 }
-
