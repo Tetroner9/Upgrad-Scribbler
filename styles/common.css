@@ -57,6 +57,7 @@ html, body {
 
 .header-button:hover {
     background: #c22;
+    box-shadow: 0 0 10px #c22
 }
 
 .modal {
